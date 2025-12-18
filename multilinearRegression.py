@@ -16,8 +16,8 @@ load_css("style.css")
 # st.title("Linear Regression Web Application")
 st.markdown("""
     <div class="card">
-            <h1>Linear Regression Web Application</h1>
-            <p>Predict <b>Tip Amount</b> based on <b>Total Bill</b> using Linear Regression.</p>
+            <h1>Multple Regression Web Application</h1>
+            <p>Predict <b>Tip Amount</b> based on <b>Total Bill and Size</b> using Multiple Linear Regression.</p>
             </div>""", unsafe_allow_html=True)
 # Load dataset
 def load_data():
@@ -55,10 +55,10 @@ st.markdown(f"""<div class="card">
 st.markdown('<div class="card">', unsafe_allow_html=True)
 st.markdown('<h1>Model Visualization</h1>', unsafe_allow_html=True)
 plt.title("Total Bill vs Tip Amount with Multiple Linear Regression Line")
-plt.xlabel("Total Bill and Size")
+plt.xlabel("Total Bill")
 plt.ylabel("Tip Amount")
 plt.scatter(df["total_bill"], y, color='blue', label='Actual Tips')
-plt.plot(x, model.predict(scaler.transform(x)), color='red', linewidth=2, label='Predicted Tips')
+plt.plot(df["total_bill"], model.predict(scaler.transform(df[["total_bill", "size"]])), color='red', linewidth=2, label='Predicted Tips')
 plt.legend()
 st.pyplot(plt.gcf())
 st.markdown('</div>', unsafe_allow_html=True)
