@@ -74,3 +74,4 @@ if st.button("Predict Tip"):
     scaled_input = scaler.transform([[total_bill_input]])
     predicted_tip = model.predict(scaled_input)[0]
     st.markdown(f'<div class="prediction-box">Predicted Tip Amount: {predicted_tip:.2f}</div>', unsafe_allow_html=True)
+st.markdown("#####END#####")
