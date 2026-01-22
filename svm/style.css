@@ -1,0 +1,30 @@
+body {
+    background-color: #f4f6f9;
+}
+
+.card {
+    background-color: rgb(170, 243, 81);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h1, .card h2 {
+    color: #1f2937;
+}
+
+.card p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.prediction-box {
+    background-color: #2563eb;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
