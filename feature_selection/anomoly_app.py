@@ -43,7 +43,7 @@ with tab1:
         no2_gt = st.number_input("NO2(GT) - Nitrogen Dioxide", min_value=0.0, value=100.0, step=1.0)
    
     if st.button("🔮 Predict", key="single_predict"):
-        # Prepare input data
+        # Prepare input data hello
         input_data = pd.DataFrame({
             'CO(GT)': [co_gt],
             'C6H6(GT)': [c6h6_gt],
